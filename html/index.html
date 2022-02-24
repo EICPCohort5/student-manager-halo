@@ -5,10 +5,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/bootstrap.css">
-  <title>Document Template</title>
+  <title>Student Manager - Halo</title>
 </head>
 <body>
-  <main class="container"></main>
-  <script src="main.js" type="module"></script>
+  <main class="container">
+    <header>
+      <h1>Student Manager</h1>
+      <hr>
+    </header>
+    <section>
+      <form id="student-form">
+        <div>
+          <label for="firstname" class="form-label">First Name:</label>
+          <input type="text" name="firstname" id="firstname" class="form-control">
+        </div>
+        <div>
+          <label for="lastname" class="form-label">Last Name:</label>
+          <input type="text" name="lastname" id="lastname" class="form-control">
+        </div>
+        <div>
+          <label for="location" class="form-label">Location:</label>
+          <select name="location" id="location" class="form-select">
+            <option value="US">US</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+          </select>
+        </div>
+        <div class="mt-2"><button class="btn btn-warning" type="submit">Add Student</button></div>
+      </form>
+    </section>
+    <section class="row">
+      <div class="col">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody id="student-list"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="../js/main.js" type="module"></script>
 </body>
 </html>
